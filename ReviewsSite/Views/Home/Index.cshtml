@@ -1,0 +1,26 @@
+﻿@model IEnumerable<ReviewsSite.Models.Review>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+@Model
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <h1>My Reviews</h1>
+
+    @foreach (var review in Model)
+    {
+        <div>
+            <a href="/Home/Details/@review.Id">
+                @review.Name
+            </a>
+        </div>
+    }
+
+</body>
+</html>
