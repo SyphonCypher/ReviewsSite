@@ -8,7 +8,7 @@ namespace ReviewsSite
 {
     public interface IReviewRepository
     {
-        Dictionary<int, Review> GetAll();
+        List<Review> GetAll();
         Review FindById(int id);
     }
 }

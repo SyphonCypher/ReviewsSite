@@ -18,12 +18,13 @@ namespace ReviewSite.Tests
         public HomeControllerTests()
         {
             reviewRepo = Substitute.For<IReviewRepository>();
+            underTest = new HomeController(reviewRepo);
         }
 
         [Fact]
         public void Index_Returns_A_VIew()
         {
-            var result = underTest.Index();
+             var result = underTest.Index();
 
             Assert.IsType<ViewResult>(result);
         }

@@ -4,22 +4,23 @@
 }
 
 <!DOCTYPE html>
-@Model
+
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>Index</title>
+    <title>Warhammer 40K Characters Review</title>
+    <link href="~/IndexStyle.css" rel="stylesheet" />
 </head>
-<body>
-    <h1>My Reviews</h1>
+<body align="center">
+    <h1>Warhammer 40,000 Character Reviews</h1>
 
     @foreach (var review in Model)
     {
-        <div>
+        <section class="Links">
             <a href="/Home/Details/@review.Id">
                 @review.Name
             </a>
-        </div>
+        </section>
     }
 
 </body>
